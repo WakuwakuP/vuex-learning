@@ -1,0 +1,51 @@
+version: "3"
+
+volumes:
+  mariadb-v:
+    driver: local
+services:
+  mariadb:
+    image: mariadb:10.3
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - mariadb-v:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: vuex-learning
+      MYSQL_ROOT_PASSWORD: password
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+    - PMA_ARBITRARY=1
+    - PMA_HOST=mariadb
+    - PMA_USER=root
+    - PMA_PASSWORD=password
+    links:
+      - mariadb
+    ports:
+      - 8080:80
+    depends_on:
+      - mariadb
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./docker/config/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - .:/var/www/html
+    links:
+      - php-fpm
+    depends_on:
+      - php-fpm
+  php-fpm:
+    build: ./docker/images/php-fpm
+    restart: always
+    volumes:
+      - .:/var/www/html
+    links:
+      - mariadb
+    depends_on:
+      - mariadb
