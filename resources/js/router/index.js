@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import PhotoList from '../pages/PhotoList.vue';
-import Login from '../pages/Login.vue';
+import PhotoList from '../pages/PhotoList';
+import Login from '../pages/Login';
+import PhotoDetail from '../pages/PhotoDetail'
 import SystemError from '../pages/errors/System';
 
 import store from '../store';
@@ -24,6 +25,11 @@ const routes = [
         next();
       }
     },
+  },
+  {
+    path: '/photos/:id',
+    component: PhotoDetail,
+    props: true
   },
   {
     path: '/500',
