@@ -2,6 +2,16 @@
 
 laravel + vue + vue-router + vuex 
 
+## 使用バージョン
+
+|Tools|Version|
+|:---|:---|
+|PHP|7.3.6|
+|mariadb|10.4.5| 
+|node.js|10.X(LTS)|
+|npm|6.9.0|
+
+
 ## 開発環境構築手順
 
 ### 適当なディレクトリに`git clone`する
@@ -45,7 +55,7 @@ choco install nodejs-lts -Version 10.16.0
 
 npm のアップデートをする
 ```sh
-npm -i -g npm
+npm install -g npm@6.9.0
 ```
 
 ### Docker環境用dotenvを設定

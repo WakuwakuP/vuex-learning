@@ -31,7 +31,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
   && apt-get update \
   && apt-get install -y nodejs
 
-RUN npm install -g npm
+RUN npm install -g npm@6.9.0
 
 #user追加
 RUN useradd -m -s /bin/bash -u 1000 laravel \
