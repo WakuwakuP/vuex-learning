@@ -1,4 +1,4 @@
-FROM php:fpm
+FROM php:7-fpm
 
 # For composer
 RUN apt-get update \
@@ -27,9 +27,11 @@ RUN docker-php-ext-install mbstring pdo_mysql curl json intl xml bz2 opcache bcm
   && docker-php-ext-install -j$(nproc) gd
 
 # Install Node.js
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
   && apt-get update \
   && apt-get install -y nodejs
+
+RUN npm install -g npm
 
 #user追加
 RUN useradd -m -s /bin/bash -u 1000 laravel \
