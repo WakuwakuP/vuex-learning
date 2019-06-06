@@ -93,7 +93,7 @@ img {
 }
 
 .photo:hover .photo__overlay {
-  visibility: visible;
+  opacity: 1;
 }
 
 .photo:nth-child(4n+1) .photo__wrapper {
@@ -153,7 +153,8 @@ img {
   right: 0;
   text-decoration: none;
   top: 0;
-  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .photo__controls {
@@ -369,6 +370,7 @@ img {
   cursor: pointer;
   margin: 0 1rem 0 0;
   padding: 1rem;
+  transition: all 0.3s ease;
 }
 
 .tab__item--active {
@@ -400,6 +402,16 @@ img {
   border: 1px solid #dedede;
   margin-top: 1rem;
   padding: 1.5rem;
+}
+
+.panel-enter,
+.panel-leave-to {
+  opacity: 0;
+}
+
+.panel-enter-active,
+.panel-leave-active {
+  transition: opacity 0.3s ease;
 }
 
 .title {

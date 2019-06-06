@@ -4,7 +4,7 @@
 
   &:hover {
     #{$component}__overlay {
-      visibility: visible;
+    opacity: 1;
     }
   }
 
@@ -72,7 +72,9 @@
     right: 0;
     text-decoration: none;
     top: 0;
-    visibility: hidden;
+    opacity: 0;
+    // visibility: hidden;
+    transition: all 0.3s ease;
   }
 
   &__controls {

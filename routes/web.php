@@ -11,6 +11,9 @@
 |
 */
 
+// 写真ダウンロード
+Route::get('/photos/{photo}/download', 'PhotoController@download')->name('photo.download');
+
 Route::get('/{any?}', function () {
     return view('index');
 })->where('any', '.+');
