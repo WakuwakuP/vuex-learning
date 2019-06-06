@@ -34,6 +34,7 @@
 
   &__wrapper {
     overflow: hidden;
+    border-radius: .5rem;
     padding-top: 75%;
     position: relative;
   }
@@ -59,7 +60,8 @@
   }
 
   &__overlay {
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .1);
+    border-radius: .5rem;
     bottom: 0;
     color: #fff;
     cursor: zoom-in;
@@ -67,18 +69,23 @@
     flex-direction: column;
     justify-content: space-between;
     left: 0;
-    padding: 1rem;
     position: absolute;
     right: 0;
     text-decoration: none;
     top: 0;
     opacity: 0;
-    // visibility: hidden;
     transition: all 0.3s ease;
   }
 
   &__controls {
+    padding: 1rem;
     text-align: right;
+  }
+
+  &__username {
+    padding: .5rem 1rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 .5rem .5rem / 0 0 .5rem .5rem;
   }
 
   &__action {

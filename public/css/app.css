@@ -114,6 +114,7 @@ img {
 
 .photo__wrapper {
   overflow: hidden;
+  border-radius: 0.5rem;
   padding-top: 75%;
   position: relative;
 }
@@ -140,7 +141,8 @@ img {
 }
 
 .photo__overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
   bottom: 0;
   color: #fff;
   cursor: zoom-in;
@@ -148,7 +150,6 @@ img {
   flex-direction: column;
   justify-content: space-between;
   left: 0;
-  padding: 1rem;
   position: absolute;
   right: 0;
   text-decoration: none;
@@ -158,7 +159,14 @@ img {
 }
 
 .photo__controls {
+  padding: 1rem;
   text-align: right;
+}
+
+.photo__username {
+  padding: 0.5rem 1rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 0.5rem 0.5rem/0 0 0.5rem 0.5rem;
 }
 
 .photo__action {
@@ -370,7 +378,7 @@ img {
   cursor: pointer;
   margin: 0 1rem 0 0;
   padding: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 .tab__item--active {
