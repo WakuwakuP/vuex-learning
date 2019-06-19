@@ -24,6 +24,8 @@ git clone ○○/○○.git
 
 #### インストール
 
+Docker for Windowsのインストールは↓リンク先参照
+
 [Install Docker Desktop for Windows | Docker Documentation](https://docs.docker.com/docker-for-windows/install/)
 
 #### Shared Drive の設定

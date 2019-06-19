@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/essential"
+  ],
+  "rules": {
+    "vue/html-indent": [
+      "error",
+      2
+    ],
+    "import/no-unresolved": [
+      0
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.*"
+        ]
+      }
+    ],
+    "consistent-return": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.spec.js"
+      ],
+      "env": {
+        "jest": true
+      },
+      "plugins": [
+        "jest"
+      ],
+      "rules": {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
+      }
+    }
+  ]
+}
