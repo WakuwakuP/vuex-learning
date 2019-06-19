@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  class="footer"
+>
+  <button
+    class="button button--link"
+  >
+    Logout
+  </button>
+</footer>
+`;
