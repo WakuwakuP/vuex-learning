@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPanel renders correctly 1`] = `
+<div
+  class="panel"
+>
+  <form
+    class="form"
+  >
+    <!---->
+     
+    <label
+      for="login-email"
+    >
+      Email
+    </label>
+     
+    <input
+      class="form__item"
+      id="login-email"
+      type="text"
+    />
+     
+    <label
+      for="login-password"
+    >
+      Password
+    </label>
+     
+    <input
+      class="form__item"
+      id="login-password"
+      type="password"
+    />
+     
+    <div
+      class="form__button"
+    >
+      <button
+        class="button button--inverse"
+        type="submit"
+      >
+        login
+      </button>
+    </div>
+  </form>
+</div>
+`;

@@ -10,8 +10,16 @@ describe('Footer', () => {
   let actions;
   let getters;
   let options;
+  let $router;
+  let push;
 
+  // ストアのモック作成
   beforeEach(() => {
+    // push をモック化しないとエラーが出る
+    push = jest.fn();
+    $router = {
+      push: jest.fn(),
+    };
     actions = {
       'auth/logout': jest.fn(),
     };
@@ -30,6 +38,10 @@ describe('Footer', () => {
     options = {
       store,
       localVue,
+      // $routerをモック化
+      mocks: {
+        $router,
+      },
     };
   });
 
@@ -44,6 +56,27 @@ describe('Footer', () => {
     const wrapper = shallowMount(Footer, options);
     wrapper.find('button').trigger('click');
     expect(actions['auth/logout']).toHaveBeenCalled();
+  });
+
+  it('apiStatus is false logout クリック', () => {
+    const wrapper = shallowMount(Footer, {
+      store: new Vuex.Store({
+        state: {
+          auth: {
+            apiStatus: false,
+          },
+        },
+        actions,
+        getters,
+      }),
+      localVue,
+      // $routerをモック化
+      mocks: {
+        $router,
+      },
+    });
+    wrapper.find('button').trigger('click');
+    expect(push).not.toBeCalled();
   });
 
   // スナップショットテスト

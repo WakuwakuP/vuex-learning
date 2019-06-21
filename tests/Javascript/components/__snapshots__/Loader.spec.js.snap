@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders correctly 1`] = `
+<div
+  class="loader"
+>
+  <p
+    class="loading__text"
+  >
+    Loading...
+  </p>
+   
+  <div
+    class="loader__item loader__item--heart"
+  >
+    <div />
+  </div>
+</div>
+`;
