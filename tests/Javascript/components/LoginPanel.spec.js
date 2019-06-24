@@ -44,6 +44,11 @@ describe('LoginPanel', () => {
     expect(wrapper.isVueInstance()).toBeTruthy();
   });
 
+  it('renders correctly', () => {
+    const wrapper = shallowMount(LoginPanel, options);
+    expect(wrapper.element).toMatchSnapshot();
+  });
+
   it('login Action', () => {
     const email = 'example@example.com';
     const password = 'jglr;akdjvnre:,f';
@@ -88,10 +93,5 @@ describe('LoginPanel', () => {
     wrapper.find('#login-password').setValue(password);
     wrapper.find('form').trigger('submit.prevent');
     expect(push).not.toBeCalled();
-  });
-
-  it('renders correctly', () => {
-    const wrapper = shallowMount(LoginPanel, options);
-    expect(wrapper.element).toMatchSnapshot();
   });
 });

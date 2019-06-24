@@ -9,7 +9,7 @@ const state = {
 
 const getters = {
   check: state => !!state.user,
-  username: state => state.user ? state.user.name : '',
+  username: state => (state.user ? state.user.name : ''),
 };
 
 const mutations = {
@@ -103,5 +103,5 @@ export default {
   state,
   getters,
   mutations,
-  actions
+  actions,
 };

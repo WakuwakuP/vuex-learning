@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Props/VuexState Login 1`] = `
+<div
+  class="container--small"
+>
+  <ul
+    class="tab"
+  >
+    <li
+      class="tab__item tab__item--login tab__item--active"
+    >
+      Login
+    </li>
+     
+    <li
+      class="tab__item tab__item--register"
+    >
+      Register
+    </li>
+  </ul>
+   
+  <div
+    class="panel"
+    mode="out-in"
+    name="panel"
+  >
+    <form
+      class="form"
+    >
+      <!---->
+       
+      <label
+        for="login-email"
+      >
+        Email
+      </label>
+       
+      <input
+        class="form__item"
+        id="login-email"
+        type="text"
+      />
+       
+      <label
+        for="login-password"
+      >
+        Password
+      </label>
+       
+      <input
+        class="form__item"
+        id="login-password"
+        type="password"
+      />
+       
+      <div
+        class="form__button"
+      >
+        <button
+          class="button button--inverse"
+          id="login-submit"
+          type="submit"
+        >
+          login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Login Props/VuexState Register 1`] = `
+<div
+  class="container--small"
+>
+  <ul
+    class="tab"
+  >
+    <li
+      class="tab__item tab__item--login"
+    >
+      Login
+    </li>
+     
+    <li
+      class="tab__item tab__item--register tab__item--active"
+    >
+      Register
+    </li>
+  </ul>
+   
+  <div
+    class="panel"
+    mode="out-in"
+    name="panel"
+  >
+    <form
+      class="form"
+    >
+      <!---->
+       
+      <label
+        for="username"
+      >
+        Name
+      </label>
+       
+      <input
+        class="form__item"
+        id="username"
+        type="text"
+      />
+       
+      <label
+        for="email"
+      >
+        Email
+      </label>
+       
+      <input
+        class="form__item"
+        id="email"
+        type="text"
+      />
+       
+      <label
+        for="password"
+      >
+        Password
+      </label>
+       
+      <input
+        class="form__item"
+        id="password"
+        type="password"
+      />
+       
+      <label
+        for="password-confirmation"
+      >
+        Password (confirm)
+      </label>
+       
+      <input
+        class="form__item"
+        id="password-confirmation"
+        type="password"
+      />
+       
+      <div
+        class="form__button"
+      >
+        <button
+          class="button button--inverse"
+          type="submit"
+        >
+          register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

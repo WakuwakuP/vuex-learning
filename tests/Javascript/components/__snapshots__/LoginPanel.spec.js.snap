@@ -38,6 +38,7 @@ exports[`LoginPanel renders correctly 1`] = `
     >
       <button
         class="button button--inverse"
+        id="login-submit"
         type="submit"
       >
         login

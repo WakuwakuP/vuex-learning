@@ -17,7 +17,7 @@
       <label for="login-password">Password</label>
       <input type="password" class="form__item" id="login-password" v-model="loginForm.password">
       <div class="form__button">
-        <button type="submit" class="button button--inverse">login</button>
+        <button type="submit" class="button button--inverse" id="login-submit">login</button>
       </div>
     </form>
   </div>

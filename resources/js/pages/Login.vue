@@ -2,12 +2,12 @@
   <div class="container--small">
     <ul class="tab">
       <li
-        class="tab__item"
+        class="tab__item tab__item--login"
         :class="{'tab__item--active': tab === 'LoginPanel' }"
         @click="tab = 'LoginPanel'"
       >Login</li>
       <li
-        class="tab__item"
+        class="tab__item tab__item--register"
         :class="{'tab__item--active': tab === 'RegisterPanel' }"
         @click="tab = 'RegisterPanel'"
       >Register</li>
