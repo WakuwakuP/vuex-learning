@@ -9,8 +9,10 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "test": "jest",
-        "storybook": "start-storybook -p 9001 -c .storybook",
-        "build-storybook": "build-storybook -s public"
+        "build-storybook": "build-storybook -s public",
+        "storybook": "start-storybook -p 6006 -c .storybook",
+        "screenshot": "zisui --serverCmd \"npm run storybook\" http://localhost:6006",
+        "regression": "reg-suit run"
     },
     "devDependencies": {
         "@babel/core": "^7.4.5",
@@ -41,6 +43,11 @@
         "jest": "^24.8.0",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.5",
+        "reg-keygen-git-hash-plugin": "^0.7.16",
+        "reg-notify-github-plugin": "^0.7.21",
+        "reg-notify-slack-plugin": "^0.7.16",
+        "reg-publish-gcs-plugin": "^0.7.16",
+        "reg-suit": "^0.7.17",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
