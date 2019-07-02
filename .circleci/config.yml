@@ -31,4 +31,4 @@ jobs:
           command: npm run screenshot
       - run:
           name: Regression
-          command: npm run regression
+          command: npm run storybook
