@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/reg-suit
   docker:
-    - image: kahiro/node-nightmare
+    - image: wakuwakup/node-nightmare
       environment:
         DISPLAY: ":99"
         GOOGLE_APPLICATION_CREDENTIALS: "/root/gcloud-service-key.json"
