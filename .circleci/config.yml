@@ -17,18 +17,18 @@ jobs:
           command: echo $GCLOUD_SERVICE_KEY > /root/gcloud-service-key.json
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-{{ checksum "package-lock.json" }}
             - v1-dependencies-
       - run:
           name: Install dependencies
-          command: yarn --pure-lockfile
+          command: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run:
           name: Screenshot
-          command: yarn run screenshot
+          command: npm run screenshot
       - run:
           name: Regression
-          command: yarn run regression
+          command: npm run regression
