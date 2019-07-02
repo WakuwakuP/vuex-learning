@@ -11,10 +11,10 @@
   "plugins": {
     "reg-keygen-git-hash-plugin": true,
     "reg-notify-github-plugin": {
-      "clientId": "client_id"
+      "clientId": "M7Q0MDYwMjGx0C8rTa3QzUlNLMrLzEvXNzQyMjSzNNQPT8wuLQfiAAA="
     },
     "reg-publish-gcs-plugin": {
-      "bucketName": "bucket_name"
+      "bucketName": "reg-publish-bucket-b8f9ae90-382a-4544-845b-f3a66dsa"
     }
   }
 }
