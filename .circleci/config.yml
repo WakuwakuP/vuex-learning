@@ -1,0 +1,34 @@
+defaults: &defaults
+  working_directory: ~/reg-suit
+  docker:
+    - image: wakuwakup/node-nightmare
+      environment:
+        DISPLAY: ":99"
+        GOOGLE_APPLICATION_CREDENTIALS: "/root/gcloud-service-key.json"
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: setup GCP
+          command: echo $GCLOUD_SERVICE_KEY > /root/gcloud-service-key.json
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Screenshot
+          command: npm run screenshot
+      - run:
+          name: Regression
+          command: npm run regression
