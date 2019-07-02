@@ -28,7 +28,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run:
           name: Screenshot
-          command: npm run screenshot
+          command: npm run storybook
       - run:
           name: Regression
-          command: npm run storybook
+          command: npm run regression
