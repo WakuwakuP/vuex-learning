@@ -13,6 +13,9 @@
     "reg-notify-github-plugin": {
       "clientId": "M7Q0MDYwMjGx0C8rTa3QzUlNLMrLzEvXNzQyMjSzNNQPT8wuLQfiAAA="
     },
+    "reg-notify-slack-plugin": {
+      "webhookUrl": "https://hooks.slack.com/services/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"
+    },
     "reg-publish-gcs-plugin": {
       "bucketName": "reg-publish-bucket-b8f9ae90-382a-4544-845b-f3a66dsa"
     }
