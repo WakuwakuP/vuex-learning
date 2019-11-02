@@ -42,7 +42,7 @@
         "flush-promises": "^1.0.2",
         "jest": "^24.8.0",
         "laravel-mix": "^4.0.7",
-        "lodash": "^4.17.5",
+        "lodash": "^4.17.13",
         "reg-keygen-git-hash-plugin": "^0.7.16",
         "reg-notify-github-plugin": "^0.7.21",
         "reg-notify-slack-plugin": "^0.7.16",
